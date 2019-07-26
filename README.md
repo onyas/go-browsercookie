@@ -5,7 +5,7 @@
 ## Install
 
 ```golang
-go get github.com/onyas/go-browsercookie
+go get -u github.com/onyas/go-browsercookie
 ```
 
 ## Usage
@@ -29,3 +29,7 @@ func main() {
 }
 
 ```
+
+##Thanks/references
+
+It's a Wrapper for [zellyn/kooky](https://github.com/zellyn/kooky), all the glory should belongs to [@zellyn]()
