@@ -1,19 +1,17 @@
 package browsercookie
 
 import (
+	"fmt"
 	"net/http"
 	"net/http/cookiejar"
+	"net/url"
 	"os/user"
 	"time"
-	"net/url"
+
 	"github.com/go-sqlite/sqlite3"
-	"fmt"
 )
 
-/**
-Get cookie from chrome
-*/
-func LoadCookieJarFromChrome(cookileUrl string) (http.CookieJar, error) {
+func Chrome(cookileUrl string) (http.CookieJar, error) {
 	jar, _ := cookiejar.New(nil)
 
 	usr, _ := user.Current()
@@ -141,4 +139,3 @@ func chromeCookieDate(timestamp_utc int64) time.Time {
 
 	return time.Unix(timestamp_utc/1000000, (timestamp_utc%1000000)*1000)
 }
-
